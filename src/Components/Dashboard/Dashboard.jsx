@@ -1,7 +1,8 @@
 import './Dashboard.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import CreatePost from '../components/CreatePost';
+import CreatePost from '../CreatePost/CreatePost.jsx';
+import PostList from '../PostList/PostList.jsx';
 
 const Dashboard = () => {
   const [posts, setPosts] = useState([]);
@@ -23,15 +24,7 @@ const Dashboard = () => {
     <div className='dashboard-container'>
       <h2>Dashboard</h2>
       <CreatePost onPostCreated={fetchPosts} />
-      <div className='post-list'>
-        {posts.map(post => (
-          <div key={post.id} className='post'>
-            <h3>{post.title}</h3>
-            <p>{post.content}</p>
-            {post.image && <img src={post.image} alt={post.title} />}
-          </div>
-        ))}
-      </div>
+      <PostList posts={posts} />
     </div>
   );
 };

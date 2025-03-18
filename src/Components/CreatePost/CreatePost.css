@@ -1,0 +1,77 @@
+.create-post-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .create-post-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .create-post-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .create-post-container input, .create-post-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .create-post-container textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  .create-post-container input[type='file'] {
+    border: none;
+  }
+  
+  .create-post-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s;
+    width: 100%;
+  }
+  
+  .create-post-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* 📱 Responsive Design */
+  @media screen and (max-width: 768px) {
+    .create-post-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .create-post-container h2 {
+      font-size: 20px;
+    }
+  
+    .create-post-container input, .create-post-container textarea {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .create-post-container button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
