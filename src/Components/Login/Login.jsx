@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -15,18 +16,20 @@ const Login = () => {
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (error) {
-      alert('Login failed');
+      setError('Invalid email or password');
     }
   };
 
   return (
-    <div>
+    <div className='login-container'>
       <h2>Login</h2>
+      {error && <p className='error-message'>{error}</p>}
       <form onSubmit={handleLogin}>
-        <input type='email' placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
-        <input type='password' placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
+        <input type='email' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <input type='password' placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button type='submit'>Login</button>
       </form>
+      <p>Don't have an account? <a href='/signup'>Sign Up</a></p>
     </div>
   );
 };

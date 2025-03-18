@@ -1,5 +1,5 @@
-/* src/Components/Login/Login.css */
-.login-container {
+/* src/Components/SignUp/SignUp.css */
+.signup-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,19 +9,7 @@
     color: white;
   }
   
-  .login-container h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .error-message {
-    color: #ff4d4d;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
-  form {
+  .signup-box {
     background: white;
     padding: 30px;
     border-radius: 10px;
@@ -32,7 +20,13 @@
     animation: fadeIn 0.8s ease-in-out;
   }
   
-  form input {
+  .signup-box h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .signup-input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -41,7 +35,7 @@
     font-size: 16px;
   }
   
-  form button {
+  .signup-button {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
@@ -53,27 +47,28 @@
     transition: background 0.3s;
   }
   
-  form button:hover {
+  .signup-button:hover {
     background-color: #0056b3;
   }
   
-  p {
+  .signup-links {
     margin-top: 10px;
+    font-size: 14px;
   }
   
-  p a {
-    color: #f8f9fa;
+  .signup-links a {
+    color: #007bff;
     text-decoration: none;
     font-weight: bold;
   }
   
-  p a:hover {
+  .signup-links a:hover {
     text-decoration: underline;
   }
   
   /* 📱 Responsive Design */
   @media screen and (max-width: 768px) {
-    form {
+    .signup-box {
       width: 90%;
       padding: 20px;
     }

@@ -1,0 +1,86 @@
+/* src/Components/Home/Home.css */
+.home-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #007bff, #0056b3), radial-gradient(circle at top, #004080, transparent);
+    color: white;
+  }
+  
+  /* 🛠️ Navbar Fix */
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1000; /* Ensures it stays on top */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth */
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+  
+  .hero-section {
+    margin-top: 100px;
+    max-width: 90%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* 📱 Mobile Styles */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+    
+    .nav-link {
+      display: block;
+      margin-top: 10px;
+    }
+  
+    .hero-section {
+      margin-top: 120px;
+      padding: 10px;
+    }
+  }
+  
