@@ -5,7 +5,6 @@ import axios from 'axios';
 
 const SignUp = () => {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ const SignUp = () => {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://your-backend-url.com/signup', { username, email, password });
+      await axios.post('https://your-backend-url.com/signup', { username, password });
       navigate('/login');
     } catch (error) {
       setError('Signup failed, please try again.');
@@ -27,7 +26,6 @@ const SignUp = () => {
         {error && <p className='error-message'>{error}</p>}
         <form onSubmit={handleSignUp}>
           <input type='text' placeholder='Username' className='signup-input' value={username} onChange={(e) => setUsername(e.target.value)} required />
-          <input type='email' placeholder='Email' className='signup-input' value={email} onChange={(e) => setEmail(e.target.value)} required />
           <input type='password' placeholder='Password' className='signup-input' value={password} onChange={(e) => setPassword(e.target.value)} required />
           <button type='submit' className='signup-button'>Sign Up</button>
         </form>

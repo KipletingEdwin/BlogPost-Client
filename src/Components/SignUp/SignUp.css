@@ -1,12 +1,13 @@
 /* src/Components/SignUp/SignUp.css */
 .signup-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background: linear-gradient(to right, #007bff, #0056b3);
     color: white;
+    margin: 0; /* Ensure no extra margin */
+    padding: 0; /* Remove default padding */
   }
   
   .signup-box {
@@ -18,6 +19,17 @@
     color: #333;
     width: 350px;
     animation: fadeIn 0.8s ease-in-out;
+    position: relative; /* Ensure it does not inherit any unwanted parent styles */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Ensure no extra div is wrapping inside the signup-box */
+  .signup-box form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
   
   .signup-box h2 {
@@ -44,11 +56,12 @@
     border-radius: 5px;
     font-size: 18px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
   }
   
   .signup-button:hover {
     background-color: #0056b3;
+    transform: scale(1.03);
   }
   
   .signup-links {
